@@ -33,15 +33,6 @@
             </li>
           </ul>
       </form>
-
-        <form action="" method="post">
-          <ul>
-            <li class="nav-item">
-              <a class="nav-link <?php echo $new_prod ? 'active' : '' ?>" href="/views/auth/new_prod.php">NewProd</a>
-            </li>
-          </ul>
-        </form>
-
           <form class="d-flex" action="/action/auth/action_logout.php">
             <button class="btn btn-danger" type="submit">
               Déconnexion

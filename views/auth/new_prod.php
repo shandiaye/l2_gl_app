@@ -1,7 +1,7 @@
 <?php
 session_start();
 $new_prod= true;
-$pageTitle = "New Prod";
+$pageTitle = "NewProd";
 include '../../header.php';
 include '../../nav.php';
 include '../../action/auth/create_produit_action.php';
@@ -36,15 +36,15 @@ unset($_SESSION['error']);
     </div>
     <div class="mb-3">
         <label for="number" class="form-label">Prix</label>
-        <input type="number" class="form-control" id="prix" name="prix">
+        <input type="number" class="form-control" id="prix" name="prix" max="20000000" min="0">
     </div>
     <div class="mb-3">
         <label for="text" class="form-label">Quantite</label>
-        <input type="text" class="form-control" id="quantite " name="quantite" min="5" max="100"> 
+        <input type="number" class="form-control" id="quantite" name="quantite" min="5" max="100"> 
     </div>
     <div class="mb-3">
         <label for="text" class="form-label">Description</label>
-        <textarea type="text" class="form-control" id="description" name="description"></textarea>
+        <textarea type="text" class="form-control" id="description" name="description" maxlength="250"></textarea>
     </div>
         <button type="submit" class="btn btn-primary">Enregistrer</button>
         </form>

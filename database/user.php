@@ -32,14 +32,5 @@ function getfullnameById($id){ //permet de savoir si l'utilisateur existe dans l
     return $user ? $user['firstname']. ' ' . $user['username'] : null; //si l'utilisateur existe on retourne le nom et le prenom sinon on retourne null
 }
 
-function registerProd($libelle,$description,$prix,$quantite){
-    global $pdo;
-    $sql = "INSERT INTO produits (libelle,description,prix,quantite) VALUES (:libelle, :description, :prix, :quantite)"; //inserer les valeurs dans la table users
-    $stmt = $pdo->prepare($sql);
-    $stmt->bindParam(':libelle' , $libelle); // associer chaque variable a son parametre sql
-    $stmt->bindParam(':description' , $description); 
-    $stmt->bindParam(':prix' , $prix);
-    $stmt->bindParam(':quantite' , $quantite); //et c'est cette variable qu'on va binder avec le parametre sql password
-    return $stmt->execute(); //l'execution va retourner true ou f
-}
+
 
